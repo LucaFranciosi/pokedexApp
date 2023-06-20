@@ -18,6 +18,7 @@ import { appReducer } from "./store/app.reducer";
     AppRoutingModule,
     CoreModule,
     StoreModule.forRoot(appReducer),
+
     
   ],
   providers: [],
