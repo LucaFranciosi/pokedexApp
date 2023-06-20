@@ -1,0 +1,11 @@
+<div class="flex-container">
+    <div class="banner"></div>
+    <div class="container">
+        <app-login-form *ngIf="isLoginMode"></app-login-form>
+        <app-registration-form *ngIf="!isLoginMode"></app-registration-form>
+        <div>
+            <button (click)="onSwitchMode()">{{isLoginMode? 'Sign up ': 'Sign in'}}</button>
+        </div>
+    </div>  
+    
+</div>

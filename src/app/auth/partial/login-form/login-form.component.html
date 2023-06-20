@@ -1,0 +1,48 @@
+<form class="form-container" [formGroup]="form" (submit)="loginButtonClick()" (keyup.enter)="loginButtonClick()">
+
+
+    <label for="customEmailInput">Email </label>
+
+    <input type="text" class="input_primary" name="email" id="email" formControlName="email">
+    <div *ngIf="form.controls['email'].invalid && (form.controls['email'].dirty || form.controls['email'].touched)"
+        class="error">
+        <small class="text-danger" *ngIf="form.get('email')?.hasError('required')">
+            This field is required.
+        </small>
+        <small class="text-danger" *ngIf="form.get('email')?.hasError('email')">
+            This is a valid email example test@gmail.com
+        </small>
+    </div>
+    <label for="password"> Password</label>
+    <div class="password_container">
+    <input type={{type}} class="input_primary password" formControName="password">
+    <span (click)="handleClick()" [ngClass]="{'eye': true, 'open': isOpen }"></span>
+    </div>
+    <div *ngIf="form.controls['password'].invalid && (form.controls['password'].dirty || form.controls['password'].touched)"
+        class="error">
+        <small class="text-danger" *ngIf="form.get('password')?.hasError('hasNumber')">Password must contain at
+            least
+            a number</small>
+        <small class="text-danger" *ngIf="form.get('password')?.hasError('hasCapitalCase')">Password must contain at
+            least a capital letter</small>
+        <small class="text-danger" *ngIf="form.get('password')?.hasError('hasSmallCase')">Password must contain at
+            least
+            a small caracter</small>
+        <small class="text-danger" *ngIf="form.get('password')?.hasError('hasSpecialCharacters')">Password must
+            contain at least a special character</small>
+        <small class="text-danger" *ngIf="form.get('password')?.hasError('required')">
+            This field is required.
+        </small>
+    </div>
+
+
+
+    <div class="button_container">
+        <input type='submit' class="button_primary submit_button" [disabled]="form.untouched || form.invalid"
+            value="Login">
+    </div>
+    
+
+
+
+</form>

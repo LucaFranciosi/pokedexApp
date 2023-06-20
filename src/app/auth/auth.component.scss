@@ -1,0 +1,29 @@
+.flex-container {
+    display: flex;
+    height: calc(100vh - 56px);
+    width: 100%;
+    .banner {
+        height: 100%;
+        width: 0;
+        background-image: url(../../assets/images/images/pokeWall.jpeg);
+        background-repeat: no-repeat;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 960px) {
+    .flex-container {
+        .banner {
+            width: 100%;
+            transition: width 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+        .contain {
+            min-width: 65%;
+        }
+    }
+}

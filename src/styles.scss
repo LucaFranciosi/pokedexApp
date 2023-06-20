@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+ a{
+    text-decoration: none;
+    color: #000;
+ }
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.input_primary {
+    width: 100%;
+    line-height: 4rem;
+    outline: 0;
+    padding: 0;
+    border: 0.3rem solid #ffff;
+    border-radius: 0.8rem;
+    text-indent: 1rem;
+    font-size: 2rem;
+    font-family: "Poppins";
+    background-color: rgba(243, 243, 244, 255);
+    transition: border 1s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    word-break: break-all;
+
+    &:hover,
+    &:focus {
+        background-color: #ffff;
+        border: 0.3rem solid rgba(253 237 243);
+        outline: 0;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus {
+        transition: background-color 600000s 0s, color 600000s 0s;
+    }
+}
+
+.error {
+    color: red;
+    font-size: 1rem;
+    text-indent: 0.5rem;
+}
+
+.button_primary {
+    display: block;
+    width: 100%;
+    color: #ffff;
+    background-color: rgba(233, 77, 137, 255);
+    border-radius: 0.8rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    height: 4rem;
+    font-size: 1.5rem;
+    margin-top: 4.5rem;
+    text-decoration: none;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    padding: 0;
+    outline: none;
+    &:disabled {
+        background-color: rgb(233 77 137 / 26%);
+    }
+}
